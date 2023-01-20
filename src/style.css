@@ -37,6 +37,14 @@ i {
   border: 0;
 }
 
+.new-task-container input:focus {
+  outline: none;
+}
+
+.new-task-container input::placeholder {
+  font-style: italic;
+}
+
 .todo-list {
   padding: 0;
   list-style-type: none;
