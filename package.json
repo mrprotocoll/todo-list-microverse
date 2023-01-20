@@ -2,16 +2,18 @@
   "name": "todo-list-microverse",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack serve --open"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mrprotocoll/todo-list-microverse.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mrprotocoll",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mrprotocoll/todo-list-microverse/issues"
