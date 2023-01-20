@@ -1,82 +1,79 @@
 body {
-    background-color: #fff;
-    margin: 0 auto;
-    height: 100vh;
-    box-sizing: border-box;
-    font-family: 'Open Sans', 'Lucida Grande', tahoma, verdana, arial, sans-serif;
+  background-color: #fff;
+  margin: 0 auto;
+  height: 100vh;
+  box-sizing: border-box;
+  font-family: 'Open Sans', 'Lucida Grande', tahoma, verdana, arial, sans-serif;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 367px;
-    justify-content: center;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 367px;
+  justify-content: center;
+  height: 100vh;
 }
 
 i {
   color: #a1a1a1;
 }
 
-.todo-header {
-}
-
 .todo-header h1 {
-    font-size: 18px;
-    font-weight: 500;
-    margin: 0;
-    color: #525252;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  color: #525252;
 }
 
 .new-task-container {
-    padding: 5px !important;
-    padding-right: 15px !important;
+  padding: 5px !important;
+  padding-right: 15px !important;
 }
 
-.new-task-container  input{
-    width: 85%;
-    padding: 12px;
-    border: 0;
+.new-task-container input {
+  width: 85%;
+  padding: 12px;
+  border: 0;
 }
 
 .todo-list {
-    padding: 0;
-    list-style-type: none;
-    margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
 }
 
 .todo-list li {
-    font-size: 14px;
-    font-weight: 300;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    color: #525252;
+  font-size: 14px;
+  font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  color: #525252;
 }
 
 .todo-container {
-    width: 100%;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 100%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
 }
 
-.row{
-    padding: 15px;
-    border-bottom: 1px solid #EBEBEB;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.row {
+  padding: 15px;
+  border-bottom: 1px solid #ebebeb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .todo-footer {
-    background-color: #F7F7F7;
-    text-align: center;
+  background-color: #f7f7f7;
+  text-align: center;
 }
 
 .todo-footer p {
-    margin: 0;
-    text-align: center;
-    padding: 15px;
-    color: #525252;
+  margin: 0;
+  text-align: center;
+  padding: 15px;
+  color: #525252;
 }
