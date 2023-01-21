@@ -9,4 +9,7 @@ window.addEventListener('load', () => {
 
   // add todo
   dom.addNewTodo();
+
+  // clear completed tasks
+  dom.clearCompletedTasks();
 });

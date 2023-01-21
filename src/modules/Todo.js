@@ -48,6 +48,14 @@ export default class Todo {
     this.save();
   }
 
+  clearCompleted() {
+    this.set(this.tasks.filter((task) => task.completed === false));
+    for (let i = 0; i < this.tasks.length; i += 1) {
+      this.tasks[i].index = i + 1;
+    }
+    this.save();
+  }
+
   save() {
     return localStorage.setItem('tasks', JSON.stringify(this.tasks));
   }
