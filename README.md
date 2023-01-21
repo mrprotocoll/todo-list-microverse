@@ -58,8 +58,6 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Link to deployed project.
-
 - [Live Demo Link](https://mrprotocoll.github.io/todo-list-microverse/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -68,7 +66,6 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
@@ -108,8 +105,6 @@ Open the index.html file using a web browser
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
-
-> Mention all of the collaborators of this project.
 
 👤 **mrprotocoll**
 
