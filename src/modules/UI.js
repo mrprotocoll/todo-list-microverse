@@ -55,6 +55,8 @@ export default class UI {
               todo.delete(id);
               row.remove();
             });
+
+            // change status
           });
         }
       });

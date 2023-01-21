@@ -42,6 +42,12 @@ export default class Todo {
     return this.tasks[index];
   }
 
+  statusUpdate(id){
+    const index = Number(id) - 1;
+    this.tasks[index].completed = !this.tasks[index].completed;
+    this.save();
+  }
+
   save() {
     return localStorage.setItem('tasks', JSON.stringify(this.tasks));
   }
