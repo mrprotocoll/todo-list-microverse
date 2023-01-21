@@ -1,5 +1,5 @@
 import './style.css';
-import UI from "./modules/UI.js"
+import UI from './modules/UI.js';
 
 window.addEventListener('load', () => {
   const dom = new UI();
@@ -8,5 +8,5 @@ window.addEventListener('load', () => {
   dom.loadTodos();
 
   // add todo
-  dom.addNewTodo()
+  dom.addNewTodo();
 });
