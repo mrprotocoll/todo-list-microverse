@@ -81,6 +81,10 @@ button {
   width: 95%;
 }
 
+.strike {
+  text-decoration: line-through;
+}
+
 .todo-list .pointer {
   width: 7%;
   text-align: center;
@@ -108,11 +112,12 @@ button {
 .todo-footer {
   background-color: #f7f7f7;
   text-align: center;
+  padding: 16px;
 }
 
-.todo-footer p {
+.todo-footer a {
   margin: 0;
   text-align: center;
-  padding: 15px;
   color: #525252;
+  text-decoration: none;
 }

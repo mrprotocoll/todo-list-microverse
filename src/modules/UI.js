@@ -23,6 +23,7 @@ export default class UI {
   loadTodos() {
     UI.loadContent(this.elements.todoList, Template.todoTasks(this.task.get())).then(() => {
       const todo = this.task;
+      const ui = this;
       this.elements.todoList.addEventListener('click', (event) => {
         const edit = event.target;
         if (edit.matches('.edit-task')) {
@@ -45,7 +46,7 @@ export default class UI {
                 const updateTask = todo.update(id, editInput.value);
                 // remove
                 row.classList.remove('active');
-                UI.loadContent(row, Template.task(updateTask));
+                UI.loadContent(row, Template.task(updateTask)).then(() =>  UI.changeStatus(todo, ui));
               }
             });
 
@@ -55,16 +56,13 @@ export default class UI {
               todo.delete(id);
               row.remove();
             });
-            
-            // change status
-            const statusElement = row.querySelector('.delete-task');
-            statusElement.addEventListener('click', () => {
-              todo.delete(id);
-              row.remove();
-            });
+
           });
         }
       });
+
+      // change status
+      UI.changeStatus(todo, ui)
     });
   }
 
@@ -77,5 +75,23 @@ export default class UI {
   static loadContent(parentElement, content) {
     parentElement.innerHTML = content;
     return Promise.resolve();
+  }
+
+  static changeStatus(todo, ui) {
+    Array.from(document.querySelectorAll('.task-check')).forEach((status) => {
+      status.addEventListener('change', function(){
+        console.log(this.getAttribute("data-id"))
+        todo.statusUpdate(this.getAttribute("data-id"));
+        ui.loadTodos()
+      });
+    })
+  }
+
+  clearCompletedTasks() {
+    document.querySelector("#clear-completed").addEventListener("click", (e) => {
+      e.preventDefault()
+      this.task.clearCompleted()
+      this.loadTodos()
+    })
   }
 }
