@@ -30,7 +30,6 @@ export default class UI {
           const row = edit.parentElement;
           const id = row.getAttribute('data-id');
           const taskDescription = edit.previousElementSibling.querySelector('.task-title').textContent;
-
           // change background
           row.classList.add('active');
 
@@ -39,14 +38,15 @@ export default class UI {
             // set the input field to focus
             const editInput = row.querySelector('.edit-description');
             UI.focusInputField(editInput);
-
             // update task
             editInput.addEventListener('keypress', (event) => {
               if (event.key === 'Enter') {
                 const updateTask = todo.update(id, editInput.value);
                 // remove
                 row.classList.remove('active');
-                UI.loadContent(row, Template.task(updateTask)).then(() =>  UI.changeStatus(todo, ui));
+                UI.loadContent(row, Template.task(updateTask)).then(() => {
+                  UI.changeStatus(todo, ui);
+                });
               }
             });
 
@@ -56,13 +56,11 @@ export default class UI {
               todo.delete(id);
               row.remove();
             });
-
           });
         }
       });
-
       // change status
-      UI.changeStatus(todo, ui)
+      UI.changeStatus(todo, ui);
     });
   }
 
@@ -79,19 +77,18 @@ export default class UI {
 
   static changeStatus(todo, ui) {
     Array.from(document.querySelectorAll('.task-check')).forEach((status) => {
-      status.addEventListener('change', function(){
-        console.log(this.getAttribute("data-id"))
-        todo.statusUpdate(this.getAttribute("data-id"));
-        ui.loadTodos()
+      status.addEventListener('change', function _() {
+        todo.statusUpdate(this.getAttribute('data-id'));
+        ui.loadTodos();
       });
-    })
+    });
   }
 
   clearCompletedTasks() {
-    document.querySelector("#clear-completed").addEventListener("click", (e) => {
-      e.preventDefault()
-      this.task.clearCompleted()
-      this.loadTodos()
-    })
+    document.querySelector('#clear-completed').addEventListener('click', (e) => {
+      e.preventDefault();
+      this.task.clearCompleted();
+      this.loadTodos();
+    });
   }
 }

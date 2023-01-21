@@ -11,5 +11,5 @@ window.addEventListener('load', () => {
   dom.addNewTodo();
 
   // clear completed tasks
-  dom.clearCompletedTasks()
+  dom.clearCompletedTasks();
 });

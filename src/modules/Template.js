@@ -1,7 +1,7 @@
 export default class Template {
     static task = (task) => `
         <div class="task">
-          <input type="checkbox" data-id="${task.index}" ${task.completed ? "checked" : ""} class="task-check"><span class="task-title ${task.completed ? "strike" : ""}"> ${task.description.trim()}</span>
+          <input type="checkbox" data-id="${task.index}" ${task.completed ? 'checked' : ''} class="task-check"><span class="task-title ${task.completed ? 'strike' : ''}"> ${task.description.trim()}</span>
         </div>
         <i class="fas fa-ellipsis-v pointer edit-task"></i>`
 
