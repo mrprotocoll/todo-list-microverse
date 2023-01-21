@@ -5,34 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List : Mrprotocoll</title>
-    <script
-      src="https://kit.fontawesome.com/f5f70a395d.js"
-      crossorigin="anonymous"
+    <script src="https://kit.fontawesome.com/f5f70a395d.js" crossorigin="anonymous"
     ></script>
   <script defer src="runtime.bundle.js"></script><script defer src="main.bundle.js"></script></head>
   <body>
     <main>
       <div class="todo-container">
         <div class="row todo-header">
-          <h1>To Do</h1>
-          <i class="fa-solid fa-rotate" id="refresh"></i>
+          <h1>To-do Task</h1>
+          <i class="fa-solid fa-rotate pointer" id="refresh"></i>
         </div>
-        <div class="row new-task-container">
-          <input type="text" placeholder="Add to your list" id="new-task">
-          <i class="fas fa-long-arrow-alt-left"></i>
-        </div>
-        <ul class="todo-list">
-          <li class="row">
-            <div class="task">
-              <input type="checkbox" name="" id=""> The task one
-            </div>
-            <div class="icon">
-              <i class="fas fa-ellipsis-v"></i>
-            </div>
-          </li>
+
+        <form id="new-task-form" class="row new-task-container">
+          <input type="text" class="input" placeholder="Add to your list..." id="task-description">
+          <button type="submit" class="pointer"><i class="fas fa-long-arrow-alt-left"></i></button>
+        </form>
+
+        <ul class="todo-list" id="todo-list">
         </ul>
+
         <div class="todo-footer">
-          <p>Clear all completed</p>
+          <a href="#" id="clear-completed">Clear all completed</a>
         </div>
       </div>
     </main>
