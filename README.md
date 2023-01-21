@@ -47,6 +47,10 @@
 ### Key Features <a name="key-features"></a>
 
 - **Static to-do list**
+- **Add to do**
+- **Remove to do**
+- **Update to do**
+- **localstorage**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -118,7 +122,8 @@ Open the index.html file using a web browser
 <!-- Features -->
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[add functionalities]**
+- [ ] **[mark todo as complete]**
+- [ ] **[rearrange to do]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
