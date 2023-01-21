@@ -10,13 +10,15 @@ main {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  max-width: 367px;
+  max-width: 467px;
   justify-content: center;
   height: 100vh;
 }
 
 i {
   color: #a1a1a1;
+
+  /* font-size: 12px; */
 }
 
 .todo-header h1 {
@@ -31,18 +33,32 @@ i {
   padding-right: 15px !important;
 }
 
-.new-task-container input {
-  width: 85%;
-  padding: 12px;
+.input {
   border: 0;
+  background-color: transparent;
+  color: #525252;
+  font-size: 15px;
+  width: 89%;
 }
 
-.new-task-container input:focus {
+.new-task-container .input {
+  width: 85%;
+  padding: 12px;
+}
+
+.input:focus {
   outline: none;
+  background-color: transparent;
 }
 
 .new-task-container input::placeholder {
   font-style: italic;
+}
+
+button {
+  outline: none;
+  background-color: transparent;
+  border: 0;
 }
 
 .todo-list {
@@ -61,6 +77,17 @@ i {
   color: #525252;
 }
 
+.todo-list .task {
+  width: 95%;
+}
+
+.todo-list .pointer {
+  width: 7%;
+  text-align: center;
+  padding: 3px;
+  cursor: pointer;
+}
+
 .todo-container {
   width: 100%;
   box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
@@ -72,6 +99,10 @@ i {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.active {
+  background-color: #fffbe5;
 }
 
 .todo-footer {

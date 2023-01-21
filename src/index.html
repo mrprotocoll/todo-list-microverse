@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List : Mrprotocoll</title>
-    <script
-      src="https://kit.fontawesome.com/f5f70a395d.js"
-      crossorigin="anonymous"
+    <script src="https://kit.fontawesome.com/f5f70a395d.js" crossorigin="anonymous"
     ></script>
   </head>
   <body>
@@ -15,13 +13,17 @@
       <div class="todo-container">
         <div class="row todo-header">
           <h1>To-do Task</h1>
-          <i class="fa-solid fa-rotate" id="refresh"></i>
+          <i class="fa-solid fa-rotate pointer" id="refresh"></i>
         </div>
-        <div class="row new-task-container">
-          <input type="text" placeholder="Add to your list" id="new-task">
-          <i class="fas fa-long-arrow-alt-left"></i>
-        </div>
-        <ul class="todo-list" id="todo-list"></ul>
+
+        <form id="new-task-form" class="row new-task-container">
+          <input type="text" class="input" placeholder="Add to your list..." id="task-description">
+          <button type="submit" class="pointer"><i class="fas fa-long-arrow-alt-left"></i></button>
+        </form>
+
+        <ul class="todo-list" id="todo-list">
+        </ul>
+
         <div class="todo-footer">
           <p>Clear all completed</p>
         </div>

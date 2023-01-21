@@ -47,14 +47,16 @@
 ### Key Features <a name="key-features"></a>
 
 - **Static to-do list**
+- **Add to do**
+- **Remove to do**
+- **Update to do**
+- **localstorage**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-
-> Link to deployed project.
 
 - [Live Demo Link](https://mrprotocoll.github.io/todo-list-microverse/)
 
@@ -64,7 +66,6 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
@@ -105,8 +106,6 @@ Open the index.html file using a web browser
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **mrprotocoll**
 
 - GitHub: [@mrprotocoll](https://github.com/mrprotocoll)
@@ -118,7 +117,8 @@ Open the index.html file using a web browser
 <!-- Features -->
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[add functionalities]**
+- [ ] **[mark todo as complete]**
+- [ ] **[rearrange to do]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
