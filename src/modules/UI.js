@@ -1,4 +1,5 @@
 import Todo from './Todo.js';
+import Template from './Template.js';
 
 export default class UI {
   constructor() {
@@ -20,21 +21,20 @@ export default class UI {
   }
 
   loadTodos() {
-    UI.loadContent(this.elements['todoList'],this.todoTasksTemplate(this.task.get())).then(() => {
+    UI.loadContent(this.elements['todoList'],Template.todoTasks(this.task.get())).then(() => {
       const todo = this.task
-      const ui = this
       this.elements['todoList'].addEventListener("click", function(event) {
         const edit = event.target;
         if(edit.matches(".edit-task")){
           const row = edit.parentElement;
           const id = row.getAttribute("data-id");
-          console.log(id)
           const taskDescription = edit.previousElementSibling.querySelector('.task-title').textContent;
+
           // change background
           row.classList.add("active")
           
           // replace content with edit field
-          UI.loadContent(row,ui.editTaskTemplate(taskDescription)).then(() => {
+          UI.loadContent(row,Template.editTask(taskDescription)).then(() => {
             // set the input field to focus
             const editInput = row.querySelector(".edit-description");
             UI.focusInputField(editInput)
@@ -45,7 +45,7 @@ export default class UI {
                 const updateTask = todo.update(id, editInput.value);
                 // remove
                 row.classList.remove("active")
-                UI.loadContent(row,ui.taskTemplate(updateTask))
+                UI.loadContent(row,Template.task(updateTask))
               }
             });
 
@@ -74,27 +74,4 @@ export default class UI {
     return Promise.resolve();
   }
 
-  taskTemplate = (task) => {
-    return `
-    <div class="task">
-      <input type="checkbox" class="task-check"><span class="task-title"> ${task.description}</span>
-    </div>
-    <i class="fas fa-ellipsis-v pointer edit-task"></i>`
-  }
-
-  todoTasksTemplate = (tasks) => {
-    let content = '';
-    tasks.forEach((task) => {
-      content += `<li class="row" data-id="${task.index}">${this.taskTemplate(task)}</li>`
-    });
-    return content;
-  };
-
-  editTaskTemplate = (value) => {
-    return `<div class="task">
-        <input type="checkbox" class="">
-        <input type="text" value="${value.trim()}" class="input edit-description" />
-      </div>
-      <i class="fas delete-task fa-solid fa-trash-can pointer icon"></i>`
-  }
 }
