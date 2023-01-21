@@ -55,8 +55,13 @@ export default class UI {
               todo.delete(id);
               row.remove();
             });
-
+            
             // change status
+            const statusElement = row.querySelector('.delete-task');
+            statusElement.addEventListener('click', () => {
+              todo.delete(id);
+              row.remove();
+            });
           });
         }
       });
