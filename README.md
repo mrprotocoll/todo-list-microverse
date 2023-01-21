@@ -51,6 +51,8 @@
 - **Remove to do**
 - **Update to do**
 - **localstorage**
+- **clear completed tasks**
+- **mark tasks as completed**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -117,7 +119,7 @@ Open the index.html file using a web browser
 <!-- Features -->
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[mark todo as complete]**
+- [ ] **[reload todo list]**
 - [ ] **[rearrange to do]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
