@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List : Mrprotocoll</title>
+    <script src="https://kit.fontawesome.com/f5f70a395d.js" crossorigin="anonymous"
+    ></script>
+  <script defer src="runtime.bundle.js"></script><script defer src="main.bundle.js"></script></head>
+  <body>
+    <main>
+      <div class="todo-container">
+        <div class="row todo-header">
+          <h1>To-do Task</h1>
+          <i class="fa-solid fa-rotate pointer" id="refresh"></i>
+        </div>
+
+        <form id="new-task-form" class="row new-task-container">
+          <input type="text" class="input" placeholder="Add to your list..." id="task-description">
+          <button type="submit" class="pointer"><i class="fas fa-long-arrow-alt-left"></i></button>
+        </form>
+
+        <ul class="todo-list" id="todo-list">
+        </ul>
+
+        <div class="todo-footer">
+          <a href="#" id="clear-completed">Clear all completed</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
