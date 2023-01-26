@@ -14,9 +14,11 @@ export default class UI {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const description = document.querySelector('#task-description');
-      this.task.add(description.value);
-      this.loadTodos();
-      form.reset();
+      if (description.value) {
+        this.task.add(description.value);
+        this.loadTodos();
+        form.reset();
+      }
     });
   }
 
@@ -40,7 +42,7 @@ export default class UI {
             UI.focusInputField(editInput);
             // update task
             editInput.addEventListener('keypress', (event) => {
-              if (event.key === 'Enter') {
+              if (event.key === 'Enter' && editInput.value) {
                 const updateTask = todo.update(id, editInput.value);
                 // remove
                 row.classList.remove('active');
