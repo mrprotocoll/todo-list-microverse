@@ -1,12 +1,12 @@
 import localStorage from './localStorageMock.js';
 
 const clearAllCompleted = (taskArr) => {
-  taskArr.filter((tasks) => tasks.completed === false);
-  taskArr.forEach((taskArr, index) => {
-    taskArr.index = index + 1;
+  const notCompleted = taskArr.filter((tasks) => tasks.completed === false);
+  notCompleted.forEach((task, index) => {
+    task.index = index + 1;
   });
-  localStorage.setItem('data', taskArr);
-  return taskArr;
+  localStorage.setItem('data', notCompleted);
+  return notCompleted;
 };
 
 export default clearAllCompleted;
