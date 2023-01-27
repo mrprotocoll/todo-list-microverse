@@ -24,7 +24,6 @@ export default class Todo {
       index: (this.tasks.length) + 1,
     });
     this.save();
-    return this;
   }
 
   delete(id) {

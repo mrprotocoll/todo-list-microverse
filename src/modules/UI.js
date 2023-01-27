@@ -9,7 +9,7 @@ export default class UI {
     };
   }
 
-  addNewTodo() {
+  addTask() {
     const form = document.getElementById('new-task-form');
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -40,6 +40,7 @@ export default class UI {
             // set the input field to focus
             const editInput = row.querySelector('.edit-description');
             UI.focusInputField(editInput);
+
             // update task
             editInput.addEventListener('keypress', (event) => {
               if (event.key === 'Enter' && editInput.value) {
@@ -53,16 +54,20 @@ export default class UI {
             });
 
             // delete task
-            const deleteElement = row.querySelector('.delete-task');
-            deleteElement.addEventListener('click', () => {
-              todo.delete(id);
-              row.remove();
-            });
+            ui.deleteTask(row, id)
           });
         }
       });
       // change status
       UI.changeStatus(todo, ui);
+    });
+  }
+
+  deleteTask (parentElement, id) {
+    const deleteElement = parentElement.querySelector('.delete-task');
+    deleteElement.addEventListener('click', () => {
+      (new Todo()).delete(id);
+      parentElement.remove();
     });
   }
 

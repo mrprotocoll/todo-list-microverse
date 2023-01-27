@@ -7,7 +7,8 @@
     "test": "jest --coverage",
     "build": "webpack",
     "start": "webpack serve --open",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "watch": "jest --watch *.js"
   },
   "repository": {
     "type": "git",
@@ -42,5 +43,8 @@
   },
   "dependencies": {
     "gh-pages": "^5.0.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   }
 }

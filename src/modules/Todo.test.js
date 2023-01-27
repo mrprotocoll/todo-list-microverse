@@ -1,2 +1,0 @@
-const todo = require('./Todo');
-
