@@ -29,7 +29,7 @@ export default class Todo {
   delete(id) {
     const taskIndex = Number(id) - 1;
     this.set(this.tasks.filter((task) => task.index !== Number(id)));
-    // update the id of object below the removed element
+    // update the id of objects below the removed element
     for (let i = taskIndex; i < this.tasks.length; i += 1) {
       this.tasks[i].index = i + 1;
     }
