@@ -9,14 +9,16 @@ export default class UI {
     };
   }
 
-  addNewTodo() {
+  addTask() {
     const form = document.getElementById('new-task-form');
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const description = document.querySelector('#task-description');
-      this.task.add(description.value);
-      this.loadTodos();
-      form.reset();
+      if (description.value) {
+        this.task.add(description.value);
+        this.loadTodos();
+        form.reset();
+      }
     });
   }
 
@@ -38,9 +40,10 @@ export default class UI {
             // set the input field to focus
             const editInput = row.querySelector('.edit-description');
             UI.focusInputField(editInput);
+
             // update task
             editInput.addEventListener('keypress', (event) => {
-              if (event.key === 'Enter') {
+              if (event.key === 'Enter' && editInput.value) {
                 const updateTask = todo.update(id, editInput.value);
                 // remove
                 row.classList.remove('active');
@@ -51,16 +54,20 @@ export default class UI {
             });
 
             // delete task
-            const deleteElement = row.querySelector('.delete-task');
-            deleteElement.addEventListener('click', () => {
-              todo.delete(id);
-              row.remove();
-            });
+            UI.deleteTask(row, id);
           });
         }
       });
       // change status
       UI.changeStatus(todo, ui);
+    });
+  }
+
+  static deleteTask(parentElement, id) {
+    const deleteElement = parentElement.querySelector('.delete-task');
+    deleteElement.addEventListener('click', () => {
+      (new Todo()).delete(id);
+      parentElement.remove();
     });
   }
 

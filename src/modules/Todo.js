@@ -14,6 +14,7 @@ export default class Todo {
 
   set(tasks) {
     this.tasks = tasks;
+    return this;
   }
 
   add(description) {
@@ -33,6 +34,7 @@ export default class Todo {
       this.tasks[i].index = i + 1;
     }
     this.save();
+    return this;
   }
 
   update(id, value) {
@@ -46,6 +48,7 @@ export default class Todo {
     const index = Number(id) - 1;
     this.tasks[index].completed = !this.tasks[index].completed;
     this.save();
+    return this;
   }
 
   clearCompleted() {
@@ -54,6 +57,7 @@ export default class Todo {
       this.tasks[i].index = i + 1;
     }
     this.save();
+    return this;
   }
 
   save() {
