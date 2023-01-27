@@ -28,4 +28,5 @@ describe('addTask', () => {
   test('Description should have the input value', () => {
     expect(taskArr[0].description).toBe('Project completed');
   });
+  
 });
