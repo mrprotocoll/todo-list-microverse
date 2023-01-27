@@ -53,6 +53,7 @@
 - **localstorage**
 - **clear completed tasks**
 - **mark tasks as completed**
+- **Unit test**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -113,6 +114,12 @@ Open the index.html file using a web browser
 - GitHub: [@mrprotocoll](https://github.com/mrprotocoll)
 - Twitter: [@dprotocoll](https://twitter.com/dprotocoll)
 - LinkedIn: [@mrprotocoll](https://www.linkedin.com/in/mrprotocoll)
+
+👤 **Ouail Laarabi**
+
+- GitHub: [@Ouail-01](https://github.com/Ouail-01?tab=overview&from=2023-01-01&to=2023-01-02)
+- Twitter: [@Ouail_laarabi](https://twitter.com/Ouail_Laarabi)
+- LinkedIn: [Ouail Laarabi](https://www.linkedin.com/in/ouail-laarabi-53203b250/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
