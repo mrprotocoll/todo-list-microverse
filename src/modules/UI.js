@@ -54,7 +54,7 @@ export default class UI {
             });
 
             // delete task
-            ui.deleteTask(row, id)
+            UI.deleteTask(row, id);
           });
         }
       });
@@ -63,7 +63,7 @@ export default class UI {
     });
   }
 
-  deleteTask (parentElement, id) {
+  static deleteTask(parentElement, id) {
     const deleteElement = parentElement.querySelector('.delete-task');
     deleteElement.addEventListener('click', () => {
       (new Todo()).delete(id);
